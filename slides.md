@@ -36,3 +36,5 @@ img{
 
 # Workflow With Git
 ## Prepared for ECRuby April 2010
+
+# Additional Content
