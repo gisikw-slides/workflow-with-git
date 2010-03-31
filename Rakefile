@@ -7,6 +7,7 @@ task :default do
   File.open("index.html","w"){|f|f.write(index <<-END
     SLIDESHOW!!
   END
+  )}
   execute <<-END
     git add .
     git commit -am "Automated build"
