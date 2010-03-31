@@ -1,30 +1,3 @@
-task :default do
-  execute <<-END
-    git checkout gh-pages
-    git merge master
-    slideshow slides.md
-  END
-  File.open("index.html","w"){|f|f.write(index <<-END
-    SLIDESHOW!!
-  END
-  )}
-  execute <<-END
-    git add .
-    git commit -am "Automated build"
-    git push origin gh-pages
-    git checkout master
-  END
-end
-
-def execute(input)
-  input.split("\n").each do |line|
-    system(line.strip) unless line.empty?
-  end
-end
-
-def index(contents)
-
-<<-TEMPLATE
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
@@ -69,7 +42,8 @@ def index(contents)
         <div id='left_pane'>
           <div class='datestamp page'></div>
             <h3>Slides</h3>
-          #{contents}
+              SLIDESHOW!!
+
         </div>
         <div id='right_pane'>
           <h2 id='top'>Search</h2>
@@ -201,5 +175,3 @@ def index(contents)
     </div>
   </body>
 </html>
-TEMPLATE
-end
