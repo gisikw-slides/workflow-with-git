@@ -5,7 +5,12 @@ task :default do
     slideshow slides.md
   END
   File.open("index.html","w"){|f|f.write(index <<-END
-    SLIDESHOW!!
+    <h2>Workflow With Git</h2>
+    <ul>
+      <li>
+        <a href="/slides.html"/>View Slides</a>
+      </li>
+    </ul>
   END
   )}
   execute <<-END
