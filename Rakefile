@@ -8,7 +8,7 @@ task :default do
     <h2>Workflow With Git</h2>
     <ul>
       <li>
-        <a href="/slides.html"/>View Slides</a>
+        <a href="slides.html"/>View Slides</a>
       </li>
     </ul>
   END
@@ -73,7 +73,6 @@ def index(contents)
       <div id='main'>
         <div id='left_pane'>
           <div class='datestamp page'></div>
-            <h3>Slides</h3>
           #{contents}
         </div>
         <div id='right_pane'>
