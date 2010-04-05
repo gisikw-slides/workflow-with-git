@@ -1,3 +1,38 @@
+<<<<<<< HEAD:index.html~master
+=======
+task :default do
+  execute <<-END
+    git checkout gh-pages
+    git merge master
+    slideshow slides.md
+  END
+  File.open("index.html","w"){|f|f.write(index <<-END
+    <h2>Workflow With Git</h2>
+    <ul>
+      <li>
+        <a href="slides.html"/>View Slides</a>
+      </li>
+    </ul>
+  END
+  )}
+  execute <<-END
+    git add .
+    git commit -am "Automated build"
+    git push origin gh-pages
+    git checkout master
+  END
+end
+
+def execute(input)
+  input.split("\n").each do |line|
+    system(line.strip) unless line.empty?
+  end
+end
+
+def index(contents)
+
+<<-TEMPLATE
+>>>>>>> master:Rakefile
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
@@ -41,9 +76,13 @@
       <div id='main'>
         <div id='left_pane'>
           <div class='datestamp page'></div>
+<<<<<<< HEAD:index.html~master
             <h3>Slides</h3>
               SLIDESHOW!!
 
+=======
+          #{contents}
+>>>>>>> master:Rakefile
         </div>
         <div id='right_pane'>
           <h2 id='top'>Search</h2>
