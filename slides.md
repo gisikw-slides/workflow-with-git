@@ -20,11 +20,14 @@ Files are lost.
 Zip files
 
 # Diff
+<div class='handout'>
+Diffs are notorious
+</div>
 
 # Primitive Version Control
-Bitkeeper
-CVS
-Subversion
+-Bitkeeper
+-CVS
+-Subversion
 
 # Beginnings of Git
 <img src='http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg'/>
