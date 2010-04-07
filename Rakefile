@@ -3,12 +3,15 @@ task :default do
     git checkout gh-pages
     git merge master
     slideshow slides.md
+    prince index.html -o handout.pdf
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>Workflow With Git</h2>
     <ul>
       <li>
         <a href="slides.html"/>View Slides</a>
+        |
+        <a href="handout.pdf"/>Handout</a>
       </li>
     </ul>
   END
@@ -16,9 +19,14 @@ task :default do
   execute <<-END
     git add .
     git commit -am "Automated build"
-    git push origin gh-pages
-    git checkout master
   END
+  print "About to push. Ready to commit? y/N: "
+  if gets.chomp == "y"
+    execute <<-END
+      git push origin gh-pages
+      git checkout master
+    END
+  end
 end
 
 def execute(input)
