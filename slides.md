@@ -12,6 +12,9 @@ Regardless of what language you prefer, version-control is an essential tool for
 
 # Remember Windows 95?
 <img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
+<div class='handout'>
+Files are lost.
+</div>
 
 # Archives
 Zip files
