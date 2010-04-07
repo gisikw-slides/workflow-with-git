@@ -3,7 +3,7 @@ task :default do
     git checkout gh-pages
     git merge master
     slideshow slides.md
-    prince index.html -o handout.pdf
+    prince slides.html -o handout.pdf
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>Workflow With Git</h2>
