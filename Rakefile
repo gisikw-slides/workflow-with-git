@@ -7,7 +7,7 @@ task :default do
     git checkout gh-pages
     git merge master
     slideshow slides.md -t kevingisi.txt
-    prince slides.html -o handout.pdf
+    prince -s http://www.princexml.com/howcome/2008/wikipedia/wiki2.css slides.html -o handout.pdf
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>Workflow With Git</h2>
