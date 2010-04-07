@@ -112,4 +112,6 @@ div.slide a{
 
 div#footer{color:#006100;margin-left:10%;}
 
+div#footer h2 a{color:#006100;}
+
 .slide pre{width:90%;background:#eee;border:2px solid #ccc; padding: 20px;}
