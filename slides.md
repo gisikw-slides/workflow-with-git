@@ -11,7 +11,7 @@ code-line-numbers: false
 Regardless of what language you prefer, version-control is an essential tool for getting things done - especially when collaborating with others. Git, an open-source tool, has quickly become one of the most widely-used versioning systems, mainly thanks to the ability to branch and merge with relative ease. We'll take a look at how you can begin to integrate Git into your current workflow.
 
 # Remember Windows 95?
-<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png' style='height:80%;'/>
+<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
 
 # Basic Commands
 <pre>
