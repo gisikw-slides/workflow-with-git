@@ -2,7 +2,7 @@ task :default do
   execute <<-END
     git checkout gh-pages
     git merge master
-    slideshow slides.md
+    slideshow slides.md -t kevingisi.txt
     prince slides.html -o handout.pdf
   END
   File.open("index.html","w"){|f|f.write(index <<-END
