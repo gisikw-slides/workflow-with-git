@@ -1,5 +1,5 @@
 author: Kevin W. Gisi
-company: ECRuby Meeting&mdashApril 8, 2010
+company: ECRuby Meeting&mdash;April 8, 2010
 title: Workflow With Git
 subtitle:
 footer: <a href='http://speakerrate.com/talks/2948-workflow-with-git'>SpeakerRate</a>
