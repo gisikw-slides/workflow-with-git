@@ -1,9 +1,8 @@
 author: Kevin W. Gisi
-company: <a href='http://ecruby.org'>ECRuby</a>
+company: ECRuby Meeting&mdashApril 8, 2010
 title: Workflow With Git
 subtitle:
-footer: SpeakerRate
-subfooter: subtext
+footer: <a href='http://speakerrate.com/talks/2948-workflow-with-git'>SpeakerRate</a>
 code-theme: eiffel
 code-line-numbers: false
 
