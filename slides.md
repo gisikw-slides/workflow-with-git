@@ -38,5 +38,36 @@ img{
 ## Prepared for ECRuby April 2010
 
 # Additional Content
+<<<<<<< HEAD:slides.md
 
 # Test a Build
+=======
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+# Additional Content
+
+>>>>>>> master:slides.md
