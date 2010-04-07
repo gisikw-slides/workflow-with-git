@@ -7,14 +7,11 @@ subfooter: subtext
 code-theme: eiffel
 code-line-numbers: false
 
-# Workflow With Git
-## Prepared for ECRuby April 2010
+# Summary
 
-# Additional Content
-<% uv do %>
-puts "hey"
-<% end %>
+Regardless of what language you prefer, version-control is an essential tool for getting things done - especially when collaborating with others. Git, an open-source tool, has quickly become one of the most widely-used versioning systems, mainly thanks to the ability to branch and merge with relative ease. We'll take a look at how you can begin to integrate Git into your current workflow.
 
-# Test a Build
-
-# Additional Content
+# Basic Commands
+<pre>
+$ git
+</pre>
