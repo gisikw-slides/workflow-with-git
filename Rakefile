@@ -1,3 +1,7 @@
+LOCATIONS = <<-END
+Eau Claire Ruby User Group&mdash;April 8, 2010
+END
+
 task :default do
   execute <<-END
     git checkout gh-pages
@@ -7,14 +11,18 @@ task :default do
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>Workflow With Git</h2>
-    <iframe src="slides.html" style="width:400px;height:300px"></iframe>
-    <ul>
-      <li>
-        <a href="slides.html"/>View Slides</a>
-        |
-        <a href="handout.pdf"/>Handout</a>
-      </li>
-    </ul>
+    <iframe src="slides.html" style="width:480px;height:384px"></iframe>
+    <h3>Associated Resources</h3>
+    <p>
+    Slides:
+      <a href="slides.html"/>HTML</a>
+      |
+      <a href="handout.pdf"/>PDF</a>
+    </p>
+    <h3>Dates and Locations</h3>
+    <p>
+      #{LOCATIONS}
+    </p>
   END
   )}
   execute <<-END
