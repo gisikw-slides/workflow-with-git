@@ -7,6 +7,7 @@ task :default do
   END
   File.open("index.html","w"){|f|f.write(index <<-END
     <h2>Workflow With Git</h2>
+    <iframe src="slides.html" style="width:400px;height:300px"></iframe>
     <ul>
       <li>
         <a href="slides.html"/>View Slides</a>
