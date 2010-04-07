@@ -1,3 +1,43 @@
+task :default do
+  execute <<-END
+    git checkout gh-pages
+    git merge master
+    slideshow slides.md
+    prince slides.html -o handout.pdf
+  END
+  File.open("index.html","w"){|f|f.write(index <<-END
+    <h2>Workflow With Git</h2>
+    <ul>
+      <li>
+        <a href="slides.html"/>View Slides</a>
+        |
+        <a href="handout.pdf"/>Handout</a>
+      </li>
+    </ul>
+  END
+  )}
+  execute <<-END
+    git add .
+    git commit -am "Automated build"
+  END
+  print "About to push. Ready to commit? y/N: "
+  if gets.chomp == "y"
+    execute <<-END
+      git push origin gh-pages
+      git checkout master
+    END
+  end
+end
+
+def execute(input)
+  input.split("\n").each do |line|
+    system(line.strip) unless line.empty?
+  end
+end
+
+def index(contents)
+
+<<-TEMPLATE
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
@@ -41,15 +81,7 @@
       <div id='main'>
         <div id='left_pane'>
           <div class='datestamp page'></div>
-              <h2>Workflow With Git</h2>
-    <ul>
-      <li>
-        <a href="slides.html"/>View Slides</a>
-        |
-        <a href="handout.pdf"/>Handout</a>
-      </li>
-    </ul>
-
+          #{contents}
         </div>
         <div id='right_pane'>
           <h2 id='top'>Search</h2>
@@ -181,3 +213,5 @@
     </div>
   </body>
 </html>
+TEMPLATE
+end
