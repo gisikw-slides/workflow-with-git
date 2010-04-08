@@ -150,12 +150,60 @@ Show current tags
 </pre>
 
 # Feature Branches
+<pre>
+:$&gt; git branch html5
+:$&gt; git checkout html5
+Switched to branch "html5"
+:$&gt; git mv index.html start.html
+:$&gt; git commit -am "Moved index.html to start.html"
+Created commit 9c56488: Moved index.html to start.html
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+ rename index.html =&gt; start.html (100%)
+<pre>
+
+# Master Stays Untouched
+<pre>
+:$&gt; git checkout master
+Switched to branch "master"
+:$&gt; ls
+about.html  contact.html  help.html  index.html  style.css
+</pre>
 
 # Merging Branches
+- Navigate to the branch you want to work on
+<pre>
+:$&gt; git merge html5
+</pre>
+
+Merge the other branch into the current branch.
+
+# Remote Repositories
+
+Often, we want to push our commits to another repository. We need to register the repository first.
+<pre>
+:$&gt; git remote add origin git@github.com:gisikw/samply-application.git
+</pre>
+We tell Git a local name to call the remote, and the url where it can be accessed.
+
+# Pushing and Pulling from Remotes
+
+Push any new commits in our master branch to the remote origin
+<pre>
+:$&gt; git push origin master
+</pre>
+
+Pull any new commits on the remote origin into our master branch
+<pre>
+:$&gt; git pull origin master
+</pre>
 
 # Additional Resources
 <img src='http://pragprog.com/images/covers/original/tsgit.jpg'>
-- Pragmatic Version Control Using Git
-- Travis Swicegood
+- <a href='http://pragprog.com/titles/tsgit/pragmatic-version-control-using-git'>Pragmatic Version Control Using Git</a> by Travis Swicegood
+- <a href='http://help.github.com'>http://help.github.com</a>
+- <a href='http://www.gitcasts.com/'>GitCasts</a>
 
 # Thanks!
+
+Kevin W. Gisi
+&lt;<a href='mailto:kevin@kevingisi.com'>kevin@kevingisi.com</a>&gt;
