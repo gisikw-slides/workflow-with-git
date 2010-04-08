@@ -51,18 +51,18 @@ Regardless of what language you prefer, version-control is an essential tool for
 
 # Let's Create a Repository!
 <pre>
-:$> ls
+:$&gt; ls
 about.html  contact.html  index.html  style.css
 
-:$> git init
+:$&gt; git init
 Initialized empty Git repository in /home/gisikw/project
 </pre>
 
 # Adding initial files
 <pre>
-:$> git add .
+:$&gt; git add .
 
-:$> git commit -m "Initial Commit"
+:$&gt; git commit -m "Initial Commit"
 Created initial commit ed3ec5b: Initial commit
  0 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 about.html
@@ -74,11 +74,11 @@ Created initial commit ed3ec5b: Initial commit
 # Git Add
 Git add doesn't do what you think it does!
 <pre>
-:$> echo "<p>Hello, world</p>" > index.html
-:$> git commit -m "Added initial text to index page"
+:$&gt; echo "&lt;p&gt;Hello, world&lt;/p&gt;" &gt; index.html
+:$&gt; git commit -m "Added initial text to index page"
 # On branch master
 # Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
+#   (use "git add &lt;file&gt;..." to update what will be committed)
 #
 #       modified:   index.html
 #
@@ -88,14 +88,14 @@ no changes added to commit (use "git add" and/or "git commit -a")
 # Git Add and Commit
 Automatically add changes to files that are currently tracked:
 <pre>
-$:> git commit -a -m "Added initial text to index page"
+$:&gt; git commit -a -m "Added initial text to index page"
 Created commit 94bc6d3: Added initial text to index page
  1 files changed, 1 insertions(+), 0 deletions(-)
 </pre>
 
 # Ignoring files
 <pre>
-:$> ls
+:$&gt; ls
 about.html ~about.html contact.html index.html style.css test.html
 </pre>
 
@@ -114,15 +114,15 @@ Revision names:
 
 # Explicit Git Revisions
 <pre>
-:$> git log
+:$&gt; git log
 commit fa8db86872c83fa62efa420548d8afe36bbb5fc6
-Author: Kevin W. Gisi <=>
+Author: Kevin W. Gisi &lt;=&gt;
 Date:   Thu Apr 8 04:35:06 2010 -0500
 
     Adjusted index to display standards-complient headers
 
 commit c4e43f114f9c441ae20d51bf5277044d3edfca83
-Author: Kevin W. Gisi <=>
+Author: Kevin W. Gisi &lt;=&gt;
 Date:   Thu Apr 8 04:34:26 2010 -0500
 
     Added help.html file to display usage and FAQ information
@@ -130,19 +130,19 @@ Date:   Thu Apr 8 04:34:26 2010 -0500
 
 # Reverting a Commit
 <pre>
-:$> git revert HEAD
+:$&gt; git revert HEAD
 </pre>
 Create a new commit which undoes the changes most recently made.
 
 # Tagging a Release
 It's release time!
 <pre>
-:$> git tag 1.0
+:$&gt; git tag 1.0
 </pre>
 
 Show current tags
 <pre>
-:$> git tag
+:$&gt; git tag
 1.0
 </pre>
 
