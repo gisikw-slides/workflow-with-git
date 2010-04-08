@@ -12,32 +12,23 @@ code-line-numbers: false
 Regardless of what language you prefer, version-control is an essential tool for getting things done - especially when collaborating with others. Git, an open-source tool, has quickly become one of the most widely-used versioning systems, mainly thanks to the ability to branch and merge with relative ease. We'll take a look at how you can begin to integrate Git into your current workflow.
 
 # Remember Windows 95?
+<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
 <div class="handout">
 Regardless of your choice in programming language, computer errors are bound to happen. This is precisely why we need to have a way to back up our files. However, there's also an immense benefit to having a way of storing changes in files over time.
 </div>
-<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
 
 # Archives
 <div class="handout">
-<<<<<<< HEAD:slides.md
-One way to manage this need is to simply take a snapshot of the project at various times, and store these on some backup device. A primitive method, it is nonetheless still often used. Individuals can simply zip, or tar up their project directories, throw a version number on it, and lock it away. This mechanism starts to break down with multiple collaborators, because it becomes nearly impossible to determine what version you're working with. It's also terribly inefficient, as far as data storage goes.
-=======
 One technique for keeping track of projects it to simply create a copy of the files every so often for storage. These are typically packaged and compressed into small files, whose names include version numbers. While this works on a small level, there are two small issues: storage of redundant files, and managing version advances. If two individuals are working off of version 1.0, and they both create a new release at the same time, what versions are they?
->>>>>>> master:slides.md
 </div>
 <img src='http://upload.wikimedia.org/wikipedia/commons/0/03/Rathaus_Koepenick_-_Safe.jpg'/>
 * Compressed files
 * Version stamps: rel_1.0.3.2554beta.tar.gz
 * Locked away
-* Becomes challenging with multiple contributors
 
 # Diff
 <div class="handout">
-<<<<<<< HEAD:slides.md
-A space-saving alternative to storing a new version for each file, is to simply store the changes. The GNU "diff" tool provides a means of recording the differences between two files, and even write a new file that simply holds the changes. This new file can then be sent to collaborators, who can apply it to their current version. The issue of determining order of diffs is still an issue, but at the very least, storage is now reduced to maintaining the <em>changes</em> in a file, rather than the entire file itself.
-=======
 An alternative to the file-backup approach is to use the GNU diff tool. This allows a user to view the differences between two files, and actually create a new "diff" file that represents only the changes between the two versions. This way, the diff files can be distributes and stored, rather than making space for large redundant files. However, we still run into the concurrent version issue.
->>>>>>> master:slides.md
 </div>
 <pre>
 *** /path/to/original ''timestamp''
@@ -55,15 +46,9 @@ An alternative to the file-backup approach is to use the GNU diff tool. This all
 
 # Primitive Version Control
 <div class="handout">
-<<<<<<< HEAD:slides.md
-In order to automate the process, there are a few things that would be necessary in software designed to manage versions.
-</div>
-Goals of Versioning Software
-=======
 When developers decided it was time to automate the process, there were a few tasks that needed to be handled by any candidate versioning systems.
 </div>
 Challenges
->>>>>>> master:slides.md
 - Track changes over time
 - Handle human concurrency issues
 - Assist in merge conflicts
