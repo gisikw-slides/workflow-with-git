@@ -114,11 +114,23 @@
 
 <h1>Centralized Versioning</h1>
 
+<p><img src='http://media.pragprog.com/titles/tsgit/images/repo-centralized2.png'/></p>
+
 
 
 </div><div class='slide'>
 
-<h1>Distributed Versioning</h1>
+<h1>Decentralized Versioning</h1>
+
+<p><img src='http://media.pragprog.com/titles/tsgit/images/repo-distributed2.png'/></p>
+
+
+
+</div><div class='slide'>
+
+<h1>Git in Practice</h1>
+
+<p><img src='http://media.pragprog.com/titles/tsgit/images/repo-shared-simple.png'/></p>
 
 
 
@@ -174,13 +186,71 @@ test.html
 
 </div><div class='slide'>
 
-<h1>Reverting Changes</h1>
+<h1>Git Revisions</h1>
+
+<p>Revision names:</p>
+
+<ul>
+<li>HEAD - the latest commit</li>
+<li>HEAD~ - the second-to-last-commit</li>
+<li>HEAD~2 - you get the idea</li>
+</ul>
+
+
+
+</div><div class='slide'>
+
+<h1>Explicit Git Revisions</h1>
+
+<pre>
+:$> git log
+commit 34c959355e37e188c6b842b37bb5ef453b068b69
+Author: Kevin W. Gisi <=>
+Date:   Thu Apr 8 04:23:15 2010 -0500
+
+    Revert "Revert "Second add""
+
+    This reverts commit ba6412405909e474f5bf99d4ce5829f1db5056f0.
+
+commit ba6412405909e474f5bf99d4ce5829f1db5056f0
+Author: Kevin W. Gisi <=>
+Date:   Thu Apr 8 04:22:52 2010 -0500
+
+    Revert "Second add"
+
+    This reverts commit dadf5ec1bf8620b6765bb5beb58941d0b83978f6.
+</pre>
+
+
+
+</div><div class='slide'>
+
+<h1>Reverting a Commit</h1>
+
+<pre>
+:$> git revert HEAD
+</pre>
+
+<p>Create a new commit which undoes the changes most recently made.</p>
 
 
 
 </div><div class='slide'>
 
 <h1>Tagging a Release</h1>
+
+<p>It's release time!</p>
+
+<pre>
+:$> git tag 1.0
+</pre>
+
+<p>Show current tags</p>
+
+<pre>
+:$> git tag
+1.0
+</pre>
 
 
 
