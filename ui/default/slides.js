@@ -439,6 +439,9 @@ function fontSize(value) {
 	} else {
 		document.s5ss.addRule('body','font-size: ' + value + ' !important;');
 	}
+
+
+        imageScale();
 }
 
 function notOperaFix() {
@@ -548,6 +551,29 @@ function startup() {
 		document.onclick = clicker;
 	}
 }
+
+/* Custom script by Kevin W. Gisi */
+function imageScale() {
+
+  var vScale = 22/14;
+
+  var images = document.getElementsByTagName("img")
+  if (window.innerHeight) {
+    var vSize = window.innerHeight;
+  } else if (document.documentElement.clientHeight) {
+    var vSize = document.documentElement.clientHeight;
+  } else if (document.body.clientHeight) {
+    var vSize = document.body.clientHeight;
+  } else {
+    var vSize = 700;
+  }
+  var newSize = Math.round(vSize/vScale);
+  for (var i = 0; i < images.length; i++) {
+    images[i].height = newSize; 
+  }
+}
+
+/* End custom script */
 
 window.onload = startup;
 window.onresize = function(){setTimeout('fontScale()', 50);}

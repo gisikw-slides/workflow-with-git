@@ -84,3 +84,14 @@ img.incremental {visibility: hidden;}
 
 li:after {content: " [" attr(class) "]"; color: #F88;}
  */
+
+/* Kevin Gisi customizations */
+body, div#header, div#footer {background-image:none;}
+
+div#header, div#footer {background: #006100;}
+
+.slide h1 {background:none; color:#ccc; text-shadow: 4px 4px 4px #333;font-family: "aviano-1", "aviano-2", serif;}
+
+#slide0 h1 {color:#666; text-shadow: 4px 4px 4px #ccc; font-family: "aviano-1", "aviano-2", serif;}
+
+#footer a {color:#ccc; text-decoration:underline;}
