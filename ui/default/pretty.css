@@ -103,3 +103,9 @@ pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
+
+#currentSlide {color:#ccc;}
+#controls #navLinks a {background-color: transparent; color: #ccc;}
+#controls #navList #jumplist {color: #006100;}
+.slide img, .slide pre {border: 2px solid #ccc; -webkit-box-shadow: #888 10px 10px 5px; -moz-box-shadow: #888 10px 10px 5px;}
+.slide pre {background: #000; color: #fff; padding: 20px;}
