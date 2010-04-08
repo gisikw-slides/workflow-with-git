@@ -33,9 +33,9 @@ Regardless of what language you prefer, version-control is an essential tool for
 </pre>
 
 # Primitive Version Control
--Bitkeeper
--CVS
--Subversion
+- Bitkeeper
+- CVS
+- Subversion
 
 # Beginnings of Git
 <img src='http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg'/>
@@ -65,3 +65,27 @@ Created initial commit ed3ec5b: Initial commit
  create mode 100644 index.html
  create mode 100644 style.css
 </pre>
+
+# Ignoring files
+<pre>
+:$> ls
+about.html ~about.html contact.html index.html style.css test.html
+</pre>
+
+.gitignore
+<pre>
+~*.html
+test.html
+</pre>
+
+# Reverting Changes
+
+# Tagging a Release
+
+# Feature Branches
+
+# Merging Branches
+
+# Additional Resources
+
+# Thanks!
