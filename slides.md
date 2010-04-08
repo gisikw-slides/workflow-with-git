@@ -4,6 +4,7 @@ title: Workflow With Git
 subtitle:
 footer: <a href='http://www.kevingisi.com'>Blog</a> | <a href='http://speakerrate.com/talks/2948-workflow-with-git'>SpeakerRate</a>
 subfooter: Copyright &copy; 2010 by Kevin W. Gisi
+slides-url: http://gisikw-slides.github.com/workflow-with-git/
 code-theme: eiffel
 code-line-numbers: false
 
@@ -107,6 +108,9 @@ Created initial commit ed3ec5b: Initial commit
 
 # Git Add
 Git add doesn't do what you think it does!
+<div class="handout">
+Git add tells Git that this file should be a part of the next commit. Unlike Subversion, once a file is in the repository, future commits will not explicitly include changes to these files. For each commit, the files must be re-added, or they will be listed as "Changed but not updated"
+</div>
 <pre>
 :$&gt; echo "&lt;p&gt;Hello, world&lt;/p&gt;" &gt; index.html
 :$&gt; git commit -m "Added initial text to index page"
