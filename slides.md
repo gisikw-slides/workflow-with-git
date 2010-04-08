@@ -19,7 +19,11 @@ Regardless of your choice in programming language, computer errors are bound to 
 
 # Archives
 <div class="handout">
+<<<<<<< HEAD:slides.md
 One way to manage this need is to simply take a snapshot of the project at various times, and store these on some backup device. A primitive method, it is nonetheless still often used. Individuals can simply zip, or tar up their project directories, throw a version number on it, and lock it away. This mechanism starts to break down with multiple collaborators, because it becomes nearly impossible to determine what version you're working with. It's also terribly inefficient, as far as data storage goes.
+=======
+One technique for keeping track of projects it to simply create a copy of the files every so often for storage. These are typically packaged and compressed into small files, whose names include version numbers. While this works on a small level, there are two small issues: storage of redundant files, and managing version advances. If two individuals are working off of version 1.0, and they both create a new release at the same time, what versions are they?
+>>>>>>> master:slides.md
 </div>
 <img src='http://upload.wikimedia.org/wikipedia/commons/0/03/Rathaus_Koepenick_-_Safe.jpg'/>
 * Compressed files
@@ -29,7 +33,11 @@ One way to manage this need is to simply take a snapshot of the project at vario
 
 # Diff
 <div class="handout">
+<<<<<<< HEAD:slides.md
 A space-saving alternative to storing a new version for each file, is to simply store the changes. The GNU "diff" tool provides a means of recording the differences between two files, and even write a new file that simply holds the changes. This new file can then be sent to collaborators, who can apply it to their current version. The issue of determining order of diffs is still an issue, but at the very least, storage is now reduced to maintaining the <em>changes</em> in a file, rather than the entire file itself.
+=======
+An alternative to the file-backup approach is to use the GNU diff tool. This allows a user to view the differences between two files, and actually create a new "diff" file that represents only the changes between the two versions. This way, the diff files can be distributes and stored, rather than making space for large redundant files. However, we still run into the concurrent version issue.
+>>>>>>> master:slides.md
 </div>
 <pre>
 *** /path/to/original ''timestamp''
@@ -47,9 +55,15 @@ A space-saving alternative to storing a new version for each file, is to simply 
 
 # Primitive Version Control
 <div class="handout">
+<<<<<<< HEAD:slides.md
 In order to automate the process, there are a few things that would be necessary in software designed to manage versions.
 </div>
 Goals of Versioning Software
+=======
+When developers decided it was time to automate the process, there were a few tasks that needed to be handled by any candidate versioning systems.
+</div>
+Challenges
+>>>>>>> master:slides.md
 - Track changes over time
 - Handle human concurrency issues
 - Assist in merge conflicts
@@ -57,6 +71,9 @@ Examples
 - BitKeeper, CVS, Subversion
 
 # Beginnings of Git
+<div class="handout">
+Because of some licensing issues, the Linux gurus were forced to stop using BitKeeper to manage the source code for the Linux kernel. Linus Torvalds, the creator of the Linux kernel, set out to create his own versioning system that had a strong emphasis on handling merges, and supporting easy branching.
+</div>
 <img src='http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg'/>
 - Created by Linus Torvalds
 - Tried to avoid conventional practices (CVS,BitKeeper)
@@ -65,12 +82,21 @@ Examples
 
 # Centralized Versioning
 <img src='http://media.pragprog.com/titles/tsgit/images/repo-centralized2.png'/>
+<div class="handout">
+For some version control systems, the structure is centralized. This means that the code is actually hosted on a single server (or cluster of servers). Clients are able to able to pull down copies of the code, and push back changes, but any branching, merging, committing, is all done on a single versioning server. Subversion is an example of a centralized version control system.
+</div>
 
 # Decentralized Versioning
 <img src='http://media.pragprog.com/titles/tsgit/images/repo-distributed2.png'/>
+<div class="handout">
+Decentralized version control sytems such as Git follow a different philosophy. They, in fact, do away with clients. Instead, users are able to create local repositories, and commit, branch, merge all on their own machine. Once they are satisfied with their changes, they can push their repository's commits to another repository, but there is no requirement that there be any single repository that is considered the "master" repository. This has the added benefit of allowing users to make shorter commit cycles, and use the version control system almost like a word-processor's auto-save tool.
+</div>
 
 # Git in Practice
 <img src='http://media.pragprog.com/titles/tsgit/images/repo-shared-simple.png'/>
+<div class="handout">
+While Git is a decentralized system, most users tend to use Git in a hybridized manner - each user has a local repository, but there is also a remote repository that acts as a single point from which all users pull updates and push changes. For many, Github is this shared repository.
+</div>
 
 # Let's Create a Repository!
 <pre>
