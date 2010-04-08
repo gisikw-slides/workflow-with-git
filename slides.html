@@ -10,6 +10,7 @@
 <meta name="version" content="S5 1.1" />
 <meta name="author" content="Kevin W. Gisi" />
 <meta name="company" content="ECRuby Meeting&mdash;April 8, 2010" />
+<meta name="slides_url" content="http://gisikw-slides.github.com/workflow-with-git/" />
 <!-- configuration parameters -->
 <meta name="defaultView" content="slideshow" />
 <meta name="controlVis" content="hidden" />
@@ -220,6 +221,10 @@ Created initial commit ed3ec5b: Initial commit
 <h1>Git Add</h1>
 
 <p>Git add doesn't do what you think it does!</p>
+
+<div class="handout">
+Git add tells Git that this file should be a part of the next commit. Unlike Subversion, once a file is in the repository, future commits will not explicitly include changes to these files. For each commit, the files must be re-added, or they will be listed as "Changed but not updated"
+</div>
 
 <pre>
 :$&gt; echo "&lt;p&gt;Hello, world&lt;/p&gt;" &gt; index.html
