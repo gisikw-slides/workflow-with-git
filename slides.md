@@ -159,7 +159,7 @@ Switched to branch "html5"
 Created commit 9c56488: Moved index.html to start.html
  1 files changed, 0 insertions(+), 0 deletions(-)
  rename index.html =&gt; start.html (100%)
-<pre>
+</pre>
 
 # Master Stays Untouched
 <pre>
