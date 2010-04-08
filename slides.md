@@ -13,9 +13,15 @@ Regardless of what language you prefer, version-control is an essential tool for
 
 # Remember Windows 95?
 <img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
+<div class="handout">
+Regardless of your choice in programming language, computer errors are bound to happen. This is precisely why we need to have a way to back up our files. However, there's also an immense benefit to having a way of storing changes in files over time.
+</div>
 
 # Archives
 <img src='http://upload.wikimedia.org/wikipedia/commons/0/03/Rathaus_Koepenick_-_Safe.jpg'/>
+* Compressed files
+* Version stamps: rel_1.0.3.2554beta.tar.gz
+* Locked away
 
 # Diff
 <pre>
@@ -33,15 +39,17 @@ Regardless of what language you prefer, version-control is an essential tool for
 </pre>
 
 # Primitive Version Control
-- BitKeeper
-- CVS
-- Subversion
+- Track changes over time
+- Handle human concurrency issues
+- Assist in merge conflicts
+- BitKeeper, CVS, Subversion
 
 # Beginnings of Git
 <img src='http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg'/>
-- Linus Torvalds
+- Created by Linus Torvalds
+- Tried to avoid conventional practices (CVS,BitKeeper)
 - 1.0 release on December 21, 2005
-- Managed Linux kernel
+- Used to Manage Linux kernel
 
 # Centralized Versioning
 <img src='http://media.pragprog.com/titles/tsgit/images/repo-centralized2.png'/>
