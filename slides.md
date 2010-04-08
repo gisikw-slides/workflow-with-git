@@ -154,7 +154,7 @@ Show current tags
 # Merging Branches
 
 # Additional Resources
-<img src='http://assets1.pragprog.com/images/covers/190x228/tsgit.jpg?1236205329'>
+<img src='http://pragprog.com/images/covers/original/tsgit.jpg'>
 - Pragmatic Version Control Using Git
 - Travis Swicegood
 
