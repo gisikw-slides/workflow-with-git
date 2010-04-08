@@ -71,6 +71,28 @@ Created initial commit ed3ec5b: Initial commit
  create mode 100644 style.css
 </pre>
 
+# Git Add
+Git add doesn't do what you think it does!
+<pre>
+:$> echo "<p>Hello, world</p>" > index.html
+:$> git commit -m "Added initial text to index page"
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#
+#       modified:   index.html
+#
+no changes added to commit (use "git add" and/or "git commit -a")
+</pre>
+
+# Git Add and Commit
+Automatically add changes to files that are currently tracked:
+<pre>
+$:> git commit -a -m "Added initial text to index page"
+Created commit 94bc6d3: Added initial text to index page
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+</pre>
+
 # Ignoring files
 <pre>
 :$> ls
@@ -93,21 +115,17 @@ Revision names:
 # Explicit Git Revisions
 <pre>
 :$> git log
-commit 34c959355e37e188c6b842b37bb5ef453b068b69
+commit fa8db86872c83fa62efa420548d8afe36bbb5fc6
 Author: Kevin W. Gisi <=>
-Date:   Thu Apr 8 04:23:15 2010 -0500
+Date:   Thu Apr 8 04:35:06 2010 -0500
 
-    Revert "Revert "Second add""
-    
-    This reverts commit ba6412405909e474f5bf99d4ce5829f1db5056f0.
+    Adjusted index to display standards-complient headers
 
-commit ba6412405909e474f5bf99d4ce5829f1db5056f0
+commit c4e43f114f9c441ae20d51bf5277044d3edfca83
 Author: Kevin W. Gisi <=>
-Date:   Thu Apr 8 04:22:52 2010 -0500
+Date:   Thu Apr 8 04:34:26 2010 -0500
 
-    Revert "Second add"
-    
-    This reverts commit dadf5ec1bf8620b6765bb5beb58941d0b83978f6.
+    Added help.html file to display usage and FAQ information
 </pre>
 
 # Reverting a Commit
