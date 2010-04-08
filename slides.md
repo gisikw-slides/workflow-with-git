@@ -170,7 +170,7 @@ about.html  contact.html  help.html  index.html  style.css
 </pre>
 
 # Merging Branches
-- Navigate to the branch you want to work on
+Navigate to the branch you want to work on
 <pre>
 :$&gt; git merge html5
 </pre>
@@ -206,4 +206,5 @@ Pull any new commits on the remote origin into our master branch
 # Thanks!
 
 Kevin W. Gisi
+
 &lt;<a href='mailto:kevin@kevingisi.com'>kevin@kevingisi.com</a>&gt;
