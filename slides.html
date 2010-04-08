@@ -58,11 +58,11 @@
 
 <h1>Remember Windows 95?</h1>
 
+<p><img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/></p>
+
 <div class="handout">
 Regardless of your choice in programming language, computer errors are bound to happen. This is precisely why we need to have a way to back up our files. However, there's also an immense benefit to having a way of storing changes in files over time.
 </div>
-
-<p><img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/></p>
 
 
 
@@ -71,11 +71,7 @@ Regardless of your choice in programming language, computer errors are bound to 
 <h1>Archives</h1>
 
 <div class="handout">
-<<<<<<< HEAD:slides.md
-One way to manage this need is to simply take a snapshot of the project at various times, and store these on some backup device. A primitive method, it is nonetheless still often used. Individuals can simply zip, or tar up their project directories, throw a version number on it, and lock it away. This mechanism starts to break down with multiple collaborators, because it becomes nearly impossible to determine what version you're working with. It's also terribly inefficient, as far as data storage goes.
-=======
 One technique for keeping track of projects it to simply create a copy of the files every so often for storage. These are typically packaged and compressed into small files, whose names include version numbers. While this works on a small level, there are two small issues: storage of redundant files, and managing version advances. If two individuals are working off of version 1.0, and they both create a new release at the same time, what versions are they?
->>>>>>> master:slides.md
 </div>
 
 <p><img src='http://upload.wikimedia.org/wikipedia/commons/0/03/Rathaus_Koepenick_-_Safe.jpg'/></p>
@@ -84,7 +80,6 @@ One technique for keeping track of projects it to simply create a copy of the fi
 <li>Compressed files</li>
 <li>Version stamps: rel_1.0.3.2554beta.tar.gz</li>
 <li>Locked away</li>
-<li>Becomes challenging with multiple contributors</li>
 </ul>
 
 
@@ -94,11 +89,7 @@ One technique for keeping track of projects it to simply create a copy of the fi
 <h1>Diff</h1>
 
 <div class="handout">
-<<<<<<< HEAD:slides.md
-A space-saving alternative to storing a new version for each file, is to simply store the changes. The GNU "diff" tool provides a means of recording the differences between two files, and even write a new file that simply holds the changes. This new file can then be sent to collaborators, who can apply it to their current version. The issue of determining order of diffs is still an issue, but at the very least, storage is now reduced to maintaining the <em>changes</em> in a file, rather than the entire file itself.
-=======
 An alternative to the file-backup approach is to use the GNU diff tool. This allows a user to view the differences between two files, and actually create a new "diff" file that represents only the changes between the two versions. This way, the diff files can be distributes and stored, rather than making space for large redundant files. However, we still run into the concurrent version issue.
->>>>>>> master:slides.md
 </div>
 
 <pre>
@@ -122,49 +113,24 @@ An alternative to the file-backup approach is to use the GNU diff tool. This all
 <h1>Primitive Version Control</h1>
 
 <div class="handout">
-<<<<<<< HEAD:slides.md
-In order to automate the process, there are a few things that would be necessary in software designed to manage versions.
+When developers decided it was time to automate the process, there were a few tasks that needed to be handled by any candidate versioning systems.
 </div>
+
+<p>Challenges</p>
+
+<ul>
+<li>Track changes over time</li>
+<li>Handle human concurrency issues</li>
+<li>Assist in merge conflicts
+Examples</li>
+<li>BitKeeper, CVS, Subversion</li>
+</ul>
 
 
 
 </div><div class='slide'>
 
-<h1>Goals of Versioning Software</h1>
-
-<p>When developers decided it was time to automate the process, there were a few tasks that needed to be handled by any candidate versioning systems.
-</div>
-Challenges</p>
-
-<blockquote>
-    <blockquote>
-        <blockquote>
-            <blockquote>
-                <blockquote>
-                    <blockquote>
-                        <blockquote>
-                            <p>master:slides.md</p>
-                            
-                            <ul>
-                            <li>Track changes over time</li>
-                            <li>Handle human concurrency issues</li>
-                            <li>Assist in merge conflicts
-                            Examples</li>
-                            <li>BitKeeper, CVS, Subversion</li>
-                            </ul>
-                            
-
-
-</div><div class='slide'>
-
-                            <h1>Beginnings of Git</h1>
-                        </blockquote>
-                    </blockquote>
-                </blockquote>
-            </blockquote>
-        </blockquote>
-    </blockquote>
-</blockquote>
+<h1>Beginnings of Git</h1>
 
 <div class="handout">
 Because of some licensing issues, the Linux gurus were forced to stop using BitKeeper to manage the source code for the Linux kernel. Linus Torvalds, the creator of the Linux kernel, set out to create his own versioning system that had a strong emphasis on handling merges, and supporting easy branching.
