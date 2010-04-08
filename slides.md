@@ -33,12 +33,15 @@ Regardless of what language you prefer, version-control is an essential tool for
 </pre>
 
 # Primitive Version Control
-- Bitkeeper
+- BitKeeper
 - CVS
 - Subversion
 
 # Beginnings of Git
 <img src='http://upload.wikimedia.org/wikipedia/commons/6/69/Linus_Torvalds.jpeg'/>
+- Linus Torvalds
+- 1.0 release on December 21, 2005
+- Managed Linux kernel
 
 # Centralized Versioning
 <img src='http://media.pragprog.com/titles/tsgit/images/repo-centralized2.png'/>
@@ -151,5 +154,8 @@ Show current tags
 # Merging Branches
 
 # Additional Resources
+<img src='http://assets1.pragprog.com/images/covers/190x228/tsgit.jpg?1236205329'>
+- Pragmatic Version Control Using Git
+- Travis Swicegood
 
 # Thanks!
