@@ -49,10 +49,12 @@ An alternative to the file-backup approach is to use the GNU diff tool. This all
 <div class="handout">
 When developers decided it was time to automate the process, there were a few tasks that needed to be handled by any candidate versioning systems.
 </div>
+
 Challenges
 - Track changes over time
 - Handle human concurrency issues
 - Assist in merge conflicts
+
 Examples
 - BitKeeper, CVS, Subversion
 
