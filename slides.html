@@ -139,10 +139,10 @@
 <h1>Let's Create a Repository!</h1>
 
 <pre>
-:$> ls
+:$&gt; ls
 about.html  contact.html  index.html  style.css
 
-:$> git init
+:$&gt; git init
 Initialized empty Git repository in /home/gisikw/project
 </pre>
 
@@ -153,9 +153,9 @@ Initialized empty Git repository in /home/gisikw/project
 <h1>Adding initial files</h1>
 
 <pre>
-:$> git add .
+:$&gt; git add .
 
-:$> git commit -m "Initial Commit"
+:$&gt; git commit -m "Initial Commit"
 Created initial commit ed3ec5b: Initial commit
  0 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 about.html
@@ -173,11 +173,11 @@ Created initial commit ed3ec5b: Initial commit
 <p>Git add doesn't do what you think it does!</p>
 
 <pre>
-:$> echo "<p>Hello, world</p>" > index.html
-:$> git commit -m "Added initial text to index page"
+:$&gt; echo "&lt;p&gt;Hello, world&lt;/p&gt;" &gt; index.html
+:$&gt; git commit -m "Added initial text to index page"
 # On branch master
 # Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
+#   (use "git add &lt;file&gt;..." to update what will be committed)
 #
 #       modified:   index.html
 #
@@ -193,7 +193,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 <p>Automatically add changes to files that are currently tracked:</p>
 
 <pre>
-$:> git commit -a -m "Added initial text to index page"
+$:&gt; git commit -a -m "Added initial text to index page"
 Created commit 94bc6d3: Added initial text to index page
  1 files changed, 1 insertions(+), 0 deletions(-)
 </pre>
@@ -205,7 +205,7 @@ Created commit 94bc6d3: Added initial text to index page
 <h1>Ignoring files</h1>
 
 <pre>
-:$> ls
+:$&gt; ls
 about.html ~about.html contact.html index.html style.css test.html
 </pre>
 
@@ -237,15 +237,15 @@ test.html
 <h1>Explicit Git Revisions</h1>
 
 <pre>
-:$> git log
+:$&gt; git log
 commit fa8db86872c83fa62efa420548d8afe36bbb5fc6
-Author: Kevin W. Gisi <=>
+Author: Kevin W. Gisi &lt;=&gt;
 Date:   Thu Apr 8 04:35:06 2010 -0500
 
     Adjusted index to display standards-complient headers
 
 commit c4e43f114f9c441ae20d51bf5277044d3edfca83
-Author: Kevin W. Gisi <=>
+Author: Kevin W. Gisi &lt;=&gt;
 Date:   Thu Apr 8 04:34:26 2010 -0500
 
     Added help.html file to display usage and FAQ information
@@ -258,7 +258,7 @@ Date:   Thu Apr 8 04:34:26 2010 -0500
 <h1>Reverting a Commit</h1>
 
 <pre>
-:$> git revert HEAD
+:$&gt; git revert HEAD
 </pre>
 
 <p>Create a new commit which undoes the changes most recently made.</p>
@@ -272,13 +272,13 @@ Date:   Thu Apr 8 04:34:26 2010 -0500
 <p>It's release time!</p>
 
 <pre>
-:$> git tag 1.0
+:$&gt; git tag 1.0
 </pre>
 
 <p>Show current tags</p>
 
 <pre>
-:$> git tag
+:$&gt; git tag
 1.0
 </pre>
 
