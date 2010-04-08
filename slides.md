@@ -12,18 +12,25 @@ code-line-numbers: false
 Regardless of what language you prefer, version-control is an essential tool for getting things done - especially when collaborating with others. Git, an open-source tool, has quickly become one of the most widely-used versioning systems, mainly thanks to the ability to branch and merge with relative ease. We'll take a look at how you can begin to integrate Git into your current workflow.
 
 # Remember Windows 95?
-<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
 <div class="handout">
 Regardless of your choice in programming language, computer errors are bound to happen. This is precisely why we need to have a way to back up our files. However, there's also an immense benefit to having a way of storing changes in files over time.
 </div>
+<img src='http://upload.wikimedia.org/wikipedia/commons/3/3b/Windows_9X_BSOD.png'/>
 
 # Archives
+<div class="handout">
+One way to manage this need is to simply take a snapshot of the project at various times, and store these on some backup device. A primitive method, it is nonetheless still often used. Individuals can simply zip, or tar up their project directories, throw a version number on it, and lock it away. This mechanism starts to break down with multiple collaborators, because it becomes nearly impossible to determine what version you're working with. It's also terribly inefficient, as far as data storage goes.
+</div>
 <img src='http://upload.wikimedia.org/wikipedia/commons/0/03/Rathaus_Koepenick_-_Safe.jpg'/>
 * Compressed files
 * Version stamps: rel_1.0.3.2554beta.tar.gz
 * Locked away
+* Becomes challenging with multiple contributors
 
 # Diff
+<div class="handout">
+A space-saving alternative to storing a new version for each file, is to simply store the changes. The GNU "diff" tool provides a means of recording the differences between two files, and even write a new file that simply holds the changes. This new file can then be sent to collaborators, who can apply it to their current version. The issue of determining order of diffs is still an issue, but at the very least, storage is now reduced to maintaining the <em>changes</em> in a file, rather than the entire file itself.
+</div>
 <pre>
 *** /path/to/original ''timestamp''
 --- /path/to/new      ''timestamp''
@@ -39,9 +46,14 @@ Regardless of your choice in programming language, computer errors are bound to 
 </pre>
 
 # Primitive Version Control
+<div class="handout">
+In order to automate the process, there are a few things that would be necessary in software designed to manage versions.
+</div>
+Goals of Versioning Software
 - Track changes over time
 - Handle human concurrency issues
 - Assist in merge conflicts
+Examples
 - BitKeeper, CVS, Subversion
 
 # Beginnings of Git
